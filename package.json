@@ -27,8 +27,8 @@
   "dependencies": {
     "fastboot-app-server": "^1.0.0-beta.2",
     "fastboot-redis-cache": "^0.1.0",
-    "fastboot-s3-downloader": "^0.2.0",
-    "fastboot-s3-notifier": "^0.1.1"
+    "fastboot-s3-downloader": "simonihmig/fastboot-s3-downloader#sig-4",
+    "fastboot-s3-notifier": "simonihmig/fastboot-s3-notifier#sig-4"
   },
   "devDependencies": {
     "aws-sdk": "^2.3.7"

@@ -12,6 +12,7 @@ const REDIS_PORT   = process.env.FASTBOOT_REDIS_PORT;
 const REDIS_EXPIRY = process.env.FASTBOOT_REDIS_EXPIRY;
 const USERNAME     = process.env.FASTBOOT_USERNAME;
 const PASSWORD     = process.env.FASTBOOT_PASSWORD;
+const GZIP         = process.env.FASTBOOT_GZIP;
 
 let downloader = new S3Downloader({
   bucket: S3_BUCKET,
@@ -37,7 +38,10 @@ if (REDIS_HOST || REDIS_PORT) {
 let server = new FastBootAppServer({
   downloader: downloader,
   notifier: notifier,
-  cache: cache
+  cache: cache,
+  username: USERNAME,
+  password: PASSWORD,
+  gzip: GZIP
 });
 
 server.start();
